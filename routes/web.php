@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+//
+// Route::get('mahasiswa', function() {
+// 	return view('mahasiswa');
+// });
 
-Route::get('mahasiswa', function() { 
-	return view('mahasiswa');
-});
+Route::get('/', 'PagesController@beranda')->name('beranda');
+Route::get('mahasiswa', 'MahasiswaController@index')->name('mahasiswa');
+Route::get('mahasiswa/{nim}', 'MahasiswaController@show')->name('mahasiswa_show');

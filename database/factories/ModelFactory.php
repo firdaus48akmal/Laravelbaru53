@@ -21,3 +21,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Mahasiswa::class, function (Faker\Generator $faker) {
+    return [
+      'nim'   => $faker->numerify('H1G1#####'),
+      'nama'  => $faker->firstName($gender = null|'male'|'female').' '.$faker->lastName,
+        // 'nim' => 'H1G1'.str_random(4),
+        // 'nama' => str_random(5). ' ' .str_random(6),
+    ];
+});

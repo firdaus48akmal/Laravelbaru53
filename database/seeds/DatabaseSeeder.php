@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('mahasiswa')->truncate();
+      $this->call(MahasiswaTableSeeder::class);
+
+      // $daftar_mahasiswa = [
+      //   ['nim'=>'1234', 'nama'=>'Akmal'],
+      //   ['nim'=>'5678', 'nama'=>'Budi'],
+      //   ['nim'=>'4311', 'nama'=>'Rasyid'],
+      //   ['nim'=>'1234', 'nama'=>'Razak']
+      // ];
+      // DB::table('mahasiswa')->insert($daftar_mahasiswa);
         // $this->call(UsersTableSeeder::class);
     }
 }

@@ -4,6 +4,6 @@
   @include('_layout.menu')
 @stop
 
-@section('slider')
-  @include('_layout.slider')
+@section('content')
+  <h1> Nama mahasiswa adalah {{ $mahasiswa->nama }} </h1>
 @stop
